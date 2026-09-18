@@ -38,7 +38,7 @@ function renderKardex(){let k=document.getElementById('kIns'),r=document.getElem
 function openPOS(){location.href='index.html?pos=1'}
 function modal(t){
 mt.textContent=t;let h='';
-if(t.includes('producto')){h='<div class="formgrid productform">
+if(t.includes('producto')){h=`<div class="formgrid productform">
 <div class="f"><label>CÓDIGO INTERNO</label><input id="pcode" readonly value="Generando..."></div>
 <div class="f"><label>NOMBRE DEL PRODUCTO</label><input id="pname" placeholder="Hamburguesa Clásica"></div>
 <div class="f"><label>CATEGORÍA</label><select id="pcat"><option>Hamburguesas</option><option>Perros Calientes</option><option>Combos</option><option>Papas</option><option>Bebidas</option><option>Extras</option></select></div>
@@ -54,7 +54,7 @@ if(t.includes('producto')){h='<div class="formgrid productform">
 <div class="notice" style="margin-bottom:10px">Agrega los ingredientes que forman el producto. Puedes crear, editar o eliminar componentes libremente. El costo de la receta se calcula automáticamente.</div>
 <div id="components"></div>
 <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:8px"><button type="button" class="btn primary" onclick="addComponent()">+ Agregar componente</button><button type="button" class="btn" onclick="newComponent()">+ Crear componente</button></div></div>
-</div>'}
+</div>`}
 else if(t.includes('cliente')){h='<div class="formgrid"><div class="f"><label>RUT</label><input placeholder="12.345.678-9"></div><div class="f"><label>NOMBRE / RAZÓN SOCIAL</label><input></div><div class="f"><label>GIRO</label><input></div><div class="f"><label>TELÉFONO</label><input></div><div class="f"><label>EMAIL</label><input type="email"></div><div class="f"><label>LÍMITE CxC</label><input type="number"></div><div class="f"><label>DÍAS DE CRÉDITO</label><input type="number"></div><div class="f full"><label>DIRECCIÓN</label><input></div></div>'}
 else if(t.includes('proveedor')){h='<div class="formgrid"><div class="f"><label>RUT</label><input></div><div class="f"><label>RAZÓN SOCIAL</label><input></div><div class="f"><label>GIRO</label><input></div><div class="f"><label>CONTACTO</label><input></div><div class="f"><label>TELÉFONO</label><input></div><div class="f"><label>EMAIL</label><input></div><div class="f"><label>LÍMITE CxP</label><input type="number"></div><div class="f"><label>DÍAS DE CRÉDITO</label><input type="number" value="30"></div><div class="f full"><label>DIRECCIÓN</label><input></div></div>'}
 else if(t.includes('compra')){h='<div class="formgrid"><div class="f"><label>PROVEEDOR</label><select><option>Distribuidora Central</option><option>Bebidas Chile</option></select></div><div class="f"><label>DOCUMENTO</label><select><option>Factura</option><option>Boleta</option><option>Guía</option></select></div><div class="f"><label>N° DOCUMENTO</label><input></div><div class="f"><label>FECHA</label><input type="date"></div><div class="f"><label>CONDICIÓN CxP</label><select><option>Contado</option><option>Crédito</option></select></div><div class="f"><label>VENCIMIENTO</label><input type="date"></div><div class="f"><label>NETO</label><input type="number"></div><div class="f"><label>IVA</label><input type="number"></div><div class="f"><label>TOTAL</label><input type="number"></div><div class="f full"><label>DETALLE</label><textarea style="width:100%;min-height:100px;padding:10px"></textarea></div></div>'}
